@@ -22,7 +22,7 @@ move_y =0;       // vertival movment
  
  can_advance = false;
  
- cure = 0;
+cure = 0;
 //total_coins = instance_number(obj_coin);
 can_advance = false;
 
@@ -30,8 +30,8 @@ can_advance = false;
 //#################### health stystem ####################\\
 
 // Player Health Initialization
-health = 100;  // Starting health (you can change this to any value)
-max_health = 100;  // Maximum health
+health = 120;  // Starting health (you can change this to any value)
+max_health = 200;  // Maximum health
 
 
 
