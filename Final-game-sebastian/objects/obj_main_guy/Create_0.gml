@@ -16,7 +16,7 @@ move_y =0;       // vertival movment
  
  
  
- //##### coin collection #####\\
+ //##### cure collection #####\\
  
  total_cure = instance_number(obj_cure);
  
@@ -33,5 +33,10 @@ can_advance = false;
 health = 120;  // Starting health (you can change this to any value)
 max_health = 200;  // Maximum health
 
+
+
+
+health = 120;
+max_health = 160;
 
 

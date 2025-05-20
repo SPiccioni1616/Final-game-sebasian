@@ -6,7 +6,7 @@
     "name": "spr_easyzombie",
     "path": "sprites/spr_easyzombie/spr_easyzombie.yy",
   },
-  "solid": false,
+  "solid": true,
   "visible": true,
   "managed": true,
   "spriteMaskId": null,
