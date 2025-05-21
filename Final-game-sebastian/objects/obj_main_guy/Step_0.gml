@@ -1,23 +1,20 @@
+// Handle input for top-down movement
+var move_h = keyboard_check(vk_right) - keyboard_check(vk_left);
+var move_v = keyboard_check(vk_down) - keyboard_check(vk_up);
 
-// Handle horizontal input
-move_x = keyboard_check(vk_right) - keyboard_check(vk_left);
-move_x *= move_speed;
-
-// Jump input
-var jump_pressed = keyboard_check_pressed(vk_up);
-
-// Ground check
-is_grounded = place_meeting(x, y + 2, obj_ground);
-
-// Gravity and jumping
-if (is_grounded && jump_pressed) {
-    move_y = jump_speed;
-} else if (move_y < max_fall_speed) {
-    move_y += gravity_force;
+// Normalize diagonal movement
+var move_length = point_distance(0, 0, move_h, move_v);
+if (move_length > 0) {
+    move_h /= move_length;
+    move_v /= move_length;
 }
 
-// Move the player and collide with ground
-move_and_collide(move_x, move_y, obj_ground);
+// Set movement vector
+move_x = move_h * move_speed;
+move_y = move_v * move_speed;
+
+// Move the player and collide with ground/walls
+move_and_collide(move_x, move_y, obj_ground); // or obj_wall if that’s what you use
 
 // Restart room if out of bounds
 if (y < -300 || y > room_height + 300) {

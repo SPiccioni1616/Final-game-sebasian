@@ -1,7 +1,7 @@
 hsp = 0;         // Horizontal speed
 vsp = 0;         // Vertical speed
 grav = 0.5;      // Gravity
-spd = 1.5;       // Move speed
+spd = 2.5;       // Move speed
 max_fall_speed =10;// max downword speed
 
 

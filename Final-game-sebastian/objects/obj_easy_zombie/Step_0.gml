@@ -1,49 +1,40 @@
-// Gravity
-vsp += grav;
+// Enemy speed
+var spd = 2; // adjust as needed
 
-// Follow the player
+// Damage cooldown timer (decrease every step)
+if (damage_cooldown > 0) {
+    damage_cooldown -= 1;
+}
+
+// Find player instance
 if (instance_exists(obj_main_guy)) {
-    if (x < obj_main_guy.x) {
-        hsp = spd; // move right
-    } else if (x > obj_main_guy.x) {
-        hsp = -spd; // move left
-    } else {
-        hsp = 0;
+    var target = obj_main_guy;
+
+    // Calculate direction toward player
+    var dir = point_direction(x, y, target.x, target.y);
+
+    // Calculate movement vector
+    var move_x = lengthdir_x(spd, dir);
+    var move_y = lengthdir_y(spd, dir);
+
+    // Horizontal collision check & movement
+    if (!place_meeting(x + move_x, y, obj_ground)) {
+        x += move_x;
+    }
+
+    // Vertical collision check & movement
+    if (!place_meeting(x, y + move_y, obj_ground)) {
+        y += move_y;
+    }
+
+    // Check distance to player for damage
+    var dist = point_distance(x, y, target.x, target.y);
+    if (dist < 20 && damage_cooldown <= 0) {
+        if (variable_instance_exists(target, "health")) {
+            target.health -= 10;  // Damage amount
+            damage_cooldown = damage_delay;  // Reset cooldown
+        }
     }
 }
 
-// Horizontal collision
-if (place_meeting(x + hsp, y, obj_ground)) {
-    while (!place_meeting(x + sign(hsp), y, obj_ground)) {
-        x += sign(hsp);
-    }
-    hsp = 0;
-}
-x += hsp;
 
-// Vertical collision
-if (place_meeting(x, y + vsp, obj_ground)) {
-    while (!place_meeting(x, y + sign(vsp), obj_ground)) {
-        y += sign(vsp);
-    }
-    vsp = 0;
-}
-y += vsp;
-
-
-
-
-
-
-if (instance_exists(obj_main_guy) && damage_cooldown <= 0) {
-    var dist = point_distance(x, y, obj_main_guy.x, obj_main_guy.y);
-
-    if (dist < 20) { // Change 20 to how close it needs to be
-      
-	  var player = instance_place(x, y, obj_main_guy);
-if (player != noone && variable_instance_exists(player, "health")) {
-    player.health -= 10;
-    damage_cooldown = damage_delay;
-}
-    }
-}

@@ -7,6 +7,7 @@
     {"id":{"name":"spr_powerup_speed","path":"sprites/spr_powerup_speed/spr_powerup_speed.yy",},"order":1,},
     {"id":{"name":"spr_danger","path":"sprites/spr_danger/spr_danger.yy",},"order":4,},
     {"id":{"name":"obj_main_guy","path":"objects/obj_main_guy/obj_main_guy.yy",},"order":0,},
+    {"id":{"name":"test","path":"sprites/test/test.yy",},"order":12,},
     {"id":{"name":"obj_easy_zombie","path":"objects/obj_easy_zombie/obj_easy_zombie.yy",},"order":7,},
     {"id":{"name":"spr_restart_controller","path":"sprites/spr_restart_controller/spr_restart_controller.yy",},"order":11,},
     {"id":{"name":"Spr_door","path":"sprites/Spr_door/Spr_door.yy",},"order":3,},
@@ -16,6 +17,7 @@
     {"id":{"name":"spr_gunshoot","path":"sprites/spr_gunshoot/spr_gunshoot.yy",},"order":9,},
     {"id":{"name":"spr_gunstadic","path":"sprites/spr_gunstadic/spr_gunstadic.yy",},"order":10,},
     {"id":{"name":"obj_bullet","path":"objects/obj_bullet/obj_bullet.yy",},"order":8,},
+    {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},"order":0,},
     {"id":{"name":"obj_ground","path":"objects/obj_ground/obj_ground.yy",},"order":2,},
     {"id":{"name":"obj_cure","path":"objects/obj_cure/obj_cure.yy",},"order":6,},
     {"id":{"name":"main_guy","path":"sprites/main_guy/main_guy.yy",},"order":0,},
@@ -43,7 +45,9 @@
     "name": "Default",
     "children": [],
   },
-  "RoomOrderNodes": [],
+  "RoomOrderNodes": [
+    {"roomId":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
+  ],
   "Folders": [
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Animation Curves","folderPath":"folders/Animation Curves.yy","order":12,},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Extensions","folderPath":"folders/Extensions.yy","order":14,},

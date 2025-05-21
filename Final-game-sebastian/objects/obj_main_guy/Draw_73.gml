@@ -1,5 +1,5 @@
-draw_set_color(c_black)
-draw_text(x -50, y -50, "cures: " + string(cure));
+//draw_set_color(c_black)
+//draw_text(x -50, y -50, "cures: " + string(cure));
 
 // Draw the player sprite
 draw_self();
