@@ -5,5 +5,5 @@ if (health > max_health) {
 }
 
 with (obj_cure) {
-    instance_destroy();
+   instance_destroy();
 }
