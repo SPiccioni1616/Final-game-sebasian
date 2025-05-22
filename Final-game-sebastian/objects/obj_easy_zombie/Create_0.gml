@@ -1,10 +1,19 @@
-hsp = 0;         // Horizontal speed
-vsp = 0;         // Vertical speed
-grav = 0.5;      // Gravity
-spd = 2.5;       // Move speed
-max_fall_speed =10;// max downword speed
+// Initialize speeds
+hsp = 0;
+vsp = 0;
 
+// Movement speed
+spd = 1.5;
 
+// Bounce force when enemies collide
+bounce_force = 2;
+
+// Maximum speed caps
+max_speed = 4;
+
+// Friction to slow down movement
+my_friction = 0.9;
+
+// Damage cooldown timers
 damage_cooldown = 0;
-damage_delay = 30; // Frames between damage (about 0.5 seconds if 60fps)
-
+damage_delay = 30;  // frames between damage (about 0.5 seconds at 60fps)

@@ -25,3 +25,19 @@ if (y < -300 || y > room_height + 300) {
 if (health <= 0) {
     room_restart();
 }
+
+
+
+
+
+// Combine movement input and knockback
+var final_move_x = move_x + knockback_x;
+var final_move_y = move_y + knockback_y;
+
+// Move the player
+x += final_move_x;
+y += final_move_y;
+
+// Slowly reduce knockback over time
+knockback_x *= 0.85;
+knockback_y *= 0.85;
