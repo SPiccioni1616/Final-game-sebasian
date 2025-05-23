@@ -6,7 +6,7 @@
     "name": "main_guy",
     "path": "sprites/main_guy/main_guy.yy",
   },
-  "solid": false,
+  "solid": true,
   "visible": true,
   "managed": true,
   "spriteMaskId": null,
