@@ -27,17 +27,13 @@ if (health <= 0) {
 }
 
 
+if (health <= 0) {
+    instance_destroy(); // Remove player
+    show_message("Game Over");
+    game_restart(); // Restart the game
+}
 
 
-
-// Combine movement input and knockback
-var final_move_x = move_x + knockback_x;
-var final_move_y = move_y + knockback_y;
-
-// Move the player
-x += final_move_x;
-y += final_move_y;
-
-// Slowly reduce knockback over time
-knockback_x *= 0.85;
-knockback_y *= 0.85;
+if (mouse_check_button_pressed(mb_left)) {
+    var b = instance_create_layer(x, y, "Instances", obj_bullet);
+}
