@@ -1,6 +1,6 @@
 // Reduce health when colliding with a spike
 
-health -= 5;  // Decrease health by 10 points (adjust as necessary)
+health -= 5;
 
 
 if (health <= 0) {

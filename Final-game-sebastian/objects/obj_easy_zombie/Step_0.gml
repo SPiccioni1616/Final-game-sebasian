@@ -1,11 +1,7 @@
-// Initialize movement variables if not already
-if (!variable_global_exists("hsp")) hsp = 0;
-if (!variable_global_exists("vsp")) vsp = 0;
-
-// Damage cooldown
+// === Damage cooldown ===
 if (damage_cooldown > 0) damage_cooldown--;
 
-// Movement toward player
+// === Movement toward player ===
 var move_x = 0;
 var move_y = 0;
 
@@ -15,51 +11,30 @@ if (instance_exists(obj_main_guy)) {
     move_y = lengthdir_y(spd, dir_to_player);
 }
 
-// Repel from other zombies
-var self_inst = id;
-var repel_x = 0;
-var repel_y = 0;
+// === Move toward player ===
+x += move_x;
+y += move_y;
 
-with (obj_easy_zombie) {
-    if (id != self_inst) {
-        var dx = other.x - x;
-        var dy = other.y - y;
-        var dist = point_distance(other.x, other.y, x, y);
-
-        if (dist > 0 && dist < 32) {
-            var push_strength = (32 - dist) / 32 * 2; // Increase if needed
-            repel_x -= (dx / dist) * push_strength;
-            repel_y -= (dy / dist) * push_strength;
-        }
+// === Separation from other zombies (only THIS zombie gets pushed) ===
+var near_zombie = instance_place(x, y, obj_easy_zombie);
+if (near_zombie != noone && near_zombie.id != id) {
+    var dist = point_distance(x, y, near_zombie.x, near_zombie.y);
+    if (dist < 28 && dist > 0) {
+        var angle = point_direction(near_zombie.x, near_zombie.y, x, y); // push away from near_zombie
+        var push_amount = (28 - dist) * 0.5;
+        x += lengthdir_x(push_amount, angle);
+        y += lengthdir_y(push_amount, angle);
     }
 }
 
-// Combine movement and repulsion
-hsp += move_x + repel_x;
-vsp += move_y + repel_y;
-
-// Clamp speed and apply friction
-var max_speed = 3;
-hsp = clamp(hsp, -max_speed, max_speed);
-vsp = clamp(vsp, -max_speed, max_speed);
-
-hsp *= 0.9;
-vsp *= 0.9;
-
-// Move with collision
-if (!place_meeting(x + hsp, y, obj_ground)) {
-    x += hsp;
-} else {
-    hsp = -hsp * 0.5;
+// === Wall collision (if needed) ===
+if (place_meeting(x, y, obj_ground)) {
+    var resolve_dir = point_direction(x, y, obj_main_guy.x, obj_main_guy.y) + 180;
+    x += lengthdir_x(2, resolve_dir);
+    y += lengthdir_y(2, resolve_dir);
 }
 
-if (!place_meeting(x, y + vsp, obj_ground)) {
-    y += vsp;
-} else {
-    vsp = -vsp * 0.5;
-}
-
-// Damage player if close
+// === Damage player if close ===
 if (instance_exists(obj_main_guy)) {
     if (point_distance(x, y, obj_main_guy.x, obj_main_guy.y) < 20 && damage_cooldown <= 0) {
         if (variable_instance_exists(obj_main_guy, "health")) {
@@ -71,5 +46,17 @@ if (instance_exists(obj_main_guy)) {
             obj_main_guy.knockback_x += lengthdir_x(5, knock_dir);
             obj_main_guy.knockback_y += lengthdir_y(5, knock_dir);
         }
+    }
+}
+
+
+// === Prevent zombie from overlapping the player ===
+if (instance_exists(obj_main_guy)) {
+    var dist_to_player = point_distance(x, y, obj_main_guy.x, obj_main_guy.y);
+    if (dist_to_player < 12 && dist_to_player > 0) {
+        var push_dir = point_direction(obj_main_guy.x, obj_main_guy.y, x, y);
+        var push_amt = (24 - dist_to_player) * 0.5; // adjust radius if needed
+        x += lengthdir_x(push_amt, push_dir);
+        y += lengthdir_y(push_amt, push_dir);
     }
 }
