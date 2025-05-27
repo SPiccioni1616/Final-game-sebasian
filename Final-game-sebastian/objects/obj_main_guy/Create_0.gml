@@ -32,3 +32,9 @@ knockback_x = 0;
 knockback_y = 0;
 
 invincibility_timer = 0;
+
+teleport_cooldown = 0;
+
+teleport_pending = false;
+teleport_target_x = 0;
+teleport_target_y = 0;

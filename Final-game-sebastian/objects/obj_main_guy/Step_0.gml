@@ -64,3 +64,8 @@ if (invincibility_timer <= 0) {
         }
     }
 }
+
+if (teleport_cooldown > 0) {
+    teleport_cooldown -= 1;
+}
+
