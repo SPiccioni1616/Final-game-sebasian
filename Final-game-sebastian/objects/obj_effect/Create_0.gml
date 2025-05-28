@@ -1,0 +1,3 @@
+teleport();
+
+target = noone;
