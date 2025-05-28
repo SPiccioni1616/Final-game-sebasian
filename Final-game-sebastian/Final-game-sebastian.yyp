@@ -5,8 +5,8 @@
   "resources": [
     {"id":{"name":"obj_teleport_B_des","path":"objects/obj_teleport_B_des/obj_teleport_B_des.yy",},"order":12,},
     {"id":{"name":"spr_easyzombie","path":"sprites/spr_easyzombie/spr_easyzombie.yy",},"order":7,},
+    {"id":{"name":"Sprite16","path":"sprites/Sprite16/Sprite16.yy",},"order":15,},
     {"id":{"name":"spr_powerup_speed","path":"sprites/spr_powerup_speed/spr_powerup_speed.yy",},"order":1,},
-    {"id":{"name":"Script2","path":"scripts/Script2/Script2.yy",},"order":1,},
     {"id":{"name":"spr_danger","path":"sprites/spr_danger/spr_danger.yy",},"order":4,},
     {"id":{"name":"obj_main_guy","path":"objects/obj_main_guy/obj_main_guy.yy",},"order":0,},
     {"id":{"name":"test","path":"sprites/test/test.yy",},"order":12,},
@@ -17,6 +17,7 @@
     {"id":{"name":"obj_restart_controller","path":"objects/obj_restart_controller/obj_restart_controller.yy",},"order":9,},
     {"id":{"name":"spr_background","path":"sprites/spr_background/spr_background.yy",},"order":6,},
     {"id":{"name":"spawn_wave","path":"scripts/spawn_wave/spawn_wave.yy",},"order":0,},
+    {"id":{"name":"obj_button","path":"objects/obj_button/obj_button.yy",},"order":14,},
     {"id":{"name":"spr_gunshoot","path":"sprites/spr_gunshoot/spr_gunshoot.yy",},"order":9,},
     {"id":{"name":"spr_gunstadic","path":"sprites/spr_gunstadic/spr_gunstadic.yy",},"order":10,},
     {"id":{"name":"obj_bullet","path":"objects/obj_bullet/obj_bullet.yy",},"order":8,},
@@ -31,10 +32,11 @@
     {"id":{"name":"obj_danger","path":"objects/obj_danger/obj_danger.yy",},"order":5,},
     {"id":{"name":"spr_cure","path":"sprites/spr_cure/spr_cure.yy",},"order":5,},
     {"id":{"name":"spr_bullet","path":"sprites/spr_bullet/spr_bullet.yy",},"order":8,},
+    {"id":{"name":"rm_menu","path":"rooms/rm_menu/rm_menu.yy",},"order":1,},
     {"id":{"name":"Spr_ground","path":"sprites/Spr_ground/Spr_ground.yy",},"order":2,},
     {"id":{"name":"spr_teleporter","path":"sprites/spr_teleporter/spr_teleporter.yy",},"order":14,},
     {"id":{"name":"obj_door","path":"objects/obj_door/obj_door.yy",},"order":4,},
-    {"id":{"name":"obj_ui","path":"objects/obj_ui/obj_ui.yy",},"order":3,},
+    {"id":{"name":"obj_menu_controller","path":"objects/obj_menu_controller/obj_menu_controller.yy",},"order":3,},
   ],
   "Options": [
     {"name":"Android","path":"options/android/options_android.yy",},
@@ -54,6 +56,7 @@
     "children": [],
   },
   "RoomOrderNodes": [
+    {"roomId":{"name":"rm_menu","path":"rooms/rm_menu/rm_menu.yy",},},
     {"roomId":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
   ],
   "Folders": [

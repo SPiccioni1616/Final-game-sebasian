@@ -6,7 +6,7 @@
     "name": "Spr_door",
     "path": "sprites/Spr_door/Spr_door.yy",
   },
-  "solid": true,
+  "solid": false,
   "visible": true,
   "managed": true,
   "spriteMaskId": null,

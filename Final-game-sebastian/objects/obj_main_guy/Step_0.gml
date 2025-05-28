@@ -65,37 +65,6 @@ if (invincibility_timer <= 0) {
     }
 }
 
-if (teleport_cooldown > 0) {
-    teleport_cooldown -= 1;
-}
-
-
-
-// portal system
-
-var pad, dest;
-pad = instance_place(x,y,obj_teleport_A);
-
-if(place_meeting(x,y,pad)){
-	
-if(keyboard_check(vk_up)){
-	
-	for(i = 0; i < instance_number(obj_teleport_B_des); i++){
-		dest = instance_find(obj_teleport_B_des, i);
-		
-		if(pad.index == dest.index){
-			
-			effect = instance_create_depth(x,y,-1,obj_effect);
-			effect.target = dest;
-			break;
-			
-			
-			}
-		
-	   }
-	}
-}
-
 
 
 
