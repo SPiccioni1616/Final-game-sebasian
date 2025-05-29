@@ -4,12 +4,11 @@ if (mouse_check_button_pressed(mb_left)) {
 
     var btn_x = 50;
     var btn_y = 50;
-    var btn_w = sprite_get_width(spr_restart_controller_2);
-    var btn_h = sprite_get_height(spr_restart_controller_2);
+    var btn_w = sprite_get_width(spr_restart_controller);
+    var btn_h = sprite_get_height(spr_restart_controller);
 
     if (mx > btn_x && mx < btn_x + btn_w &&
         my > btn_y && my < btn_y + btn_h) {
-        show_debug_message("Mouse clicked!");
         room_goto(rm_menu); // Your main menu room
     }
 }

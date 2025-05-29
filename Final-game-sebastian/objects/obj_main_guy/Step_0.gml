@@ -39,7 +39,7 @@ if (health <= 0) {
 
 // Shooting
 if (mouse_check_button_pressed(mb_left)) {
-    instance_create_layer(x, y, "Instances", obj_bullet);
+    instance_create_layer(x, y, "Instances_1", obj_bullet);
 }
 
 
@@ -65,7 +65,6 @@ if (invincibility_timer <= 0) {
         }
     }
 }
-
 
 
 
