@@ -32,8 +32,9 @@ if (y < -300 || y > room_height + 300) {
 // Health check
 if (health <= 0) {
     instance_destroy(); // Remove player
-    show_message("Game Over");
-    game_restart(); // Restart the game
+ //  show_message("Game Over");
+ //  game_restart(); // Restart the game
+   room_goto(rm_gameover)
 }
 
 // Shooting
