@@ -18,13 +18,13 @@ can_advance = false;
 //#################### health stystem ####################\\
 
 // Player Health Initialization
-health = 10000000000000000000000;  // Starting health (you can change this to any value)
+health = 100;  // Starting health (you can change this to any value)
 max_health = 150;  // Maximum health
 
 
 
 
-health = 1000000000000000000000000;
+health = 100;
 max_health = 150;
 
 
