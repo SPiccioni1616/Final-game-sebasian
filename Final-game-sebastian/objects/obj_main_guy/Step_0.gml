@@ -38,8 +38,19 @@ if (health <= 0) {
 }
 
 // Shooting
-if (mouse_check_button_pressed(mb_left)) {
-    instance_create_layer(x, y, "Instances_1", obj_bullet);
+if (global.multi_shot) {
+    var angle = point_direction(x, y, mouse_x, mouse_y);
+    var bullet1 = instance_create_layer(x, y, "Instances_1", obj_bullet);
+    bullet1.direction = angle - 10;
+
+    var bullet2 = instance_create_layer(x, y, "Instances_1", obj_bullet);
+    bullet2.direction = angle;
+
+    var bullet3 = instance_create_layer(x, y, "Instances_1", obj_bullet);
+    bullet3.direction = angle + 10;
+} else {
+    var bullet = instance_create_layer(x, y, "Instances_1", obj_bullet);
+    bullet.direction = point_direction(x, y, mouse_x, mouse_y);
 }
 
 

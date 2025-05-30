@@ -20,6 +20,6 @@ if (wave_in_progress) {
     // If all enemies are dead and all were spawned
     if (enemies_spawned >= enemies_per_wave && enemies_alive <= 0) {
         wave_in_progress = false;
-        alarm[0] = 120; // wait 2 seconds before starting next wave
+        alarm[0] = 100; // wait 2 seconds before starting next wave
     }
 }

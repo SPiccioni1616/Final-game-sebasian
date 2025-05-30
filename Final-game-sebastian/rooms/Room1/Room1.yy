@@ -72,6 +72,8 @@
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_6CC524D8","properties":[],"isDnd":false,"objectId":{"name":"obj_spawn_point","path":"objects/obj_spawn_point/obj_spawn_point.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":64.0,"y":1136.0,},
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_255F6157","properties":[],"isDnd":false,"objectId":{"name":"obj_spawn_point","path":"objects/obj_spawn_point/obj_spawn_point.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":640.0,"y":1136.0,},
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_5EDBE970","properties":[],"isDnd":false,"objectId":{"name":"obj_spawn_point","path":"objects/obj_spawn_point/obj_spawn_point.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":1104.0,"y":1152.0,},
+        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_603E7BED","properties":[],"isDnd":false,"objectId":{"name":"obj_game_controller","path":"objects/obj_game_controller/obj_game_controller.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":1008.0,"y":944.0,},
+        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_7398D8BC","properties":[],"isDnd":false,"objectId":{"name":"obj_powerup_selector","path":"objects/obj_powerup_selector/obj_powerup_selector.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":1088.0,"y":1056.0,},
       ],"visible":true,"depth":0,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritVisibility":true,"inheritSubLayers":true,"gridX":16,"gridY":16,"layers":[],"hierarchyFrozen":false,"effectEnabled":true,"effectType":null,"properties":[],},
     {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"restart_controler","instances":[
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_238592D9","properties":[],"isDnd":false,"objectId":{"name":"obj_restart_controller","path":"objects/obj_restart_controller/obj_restart_controller.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":0.2,"scaleY":0.2,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":0.0,"y":1200.0,},
@@ -141,6 +143,8 @@
     {"name":"inst_255F6157","path":"rooms/Room1/Room1.yy",},
     {"name":"inst_5EDBE970","path":"rooms/Room1/Room1.yy",},
     {"name":"inst_238592D9","path":"rooms/Room1/Room1.yy",},
+    {"name":"inst_603E7BED","path":"rooms/Room1/Room1.yy",},
+    {"name":"inst_7398D8BC","path":"rooms/Room1/Room1.yy",},
   ],
   "inheritCreationOrder": false,
   "sequenceId": null,
