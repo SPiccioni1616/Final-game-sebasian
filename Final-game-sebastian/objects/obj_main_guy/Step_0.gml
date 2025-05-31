@@ -1,6 +1,9 @@
+// Cancel any built-in movement left over from earlier speed boosts
+speed = 0;
+
 // Handle input for top-down movement
-var move_h = keyboard_check(vk_right) - keyboard_check(vk_left);
-var move_v = keyboard_check(vk_down) - keyboard_check(vk_up);
+var move_h = keyboard_check(ord("D")) - keyboard_check(ord("A"));
+var move_v = keyboard_check(ord("S")) - keyboard_check(ord("W"));
 
 // Normalize diagonal movement
 var move_length = point_distance(0, 0, move_h, move_v);
@@ -9,12 +12,12 @@ if (move_length > 0) {
     move_v /= move_length;
 }
 
-// Set movement vector
-move_x = move_h * move_speed;
-move_y = move_v * move_speed;
+// Movement vector
+var move_x = move_h * move_speed;
+var move_y = move_v * move_speed;
 
 // Move the player and collide with ground/walls
-move_and_collide(move_x, move_y, obj_ground); // or obj_wall if that’s what you use
+move_and_collide(move_x, move_y, obj_ground); // or obj_wall
 
 // Apply knockback
 x += knockback_x;
@@ -31,12 +34,11 @@ if (y < -300 || y > room_height + 300) {
 
 // Health check
 if (health <= 0) {
-    instance_destroy(); // Remove player
- //  show_message("Game Over");
- //  game_restart(); // Restart the game
-   room_goto(rm_gameover)
+    instance_destroy();
+    room_goto(rm_gameover);
 }
-//shooting
+
+// Shooting
 if (mouse_check_button_pressed(mb_left)) {
     if (global.multi_shot) {
         var angle = point_direction(x, y, mouse_x, mouse_y);
@@ -54,17 +56,18 @@ if (mouse_check_button_pressed(mb_left)) {
         b.direction = point_direction(x, y, mouse_x, mouse_y);
     }
 }
-// Update invincibility timer
+
+// Invincibility timer
 if (invincibility_timer > 0) {
     invincibility_timer -= 1;
 }
 
-// Check for zombie collision and apply damage
+// Zombie collision check
 if (invincibility_timer <= 0) {
     var zombie = instance_place(x, y, obj_easy_zombie);
     if (zombie != noone) {
         health -= 10;
-        invincibility_timer = 30; // 0.5 seconds of invincibility
+        invincibility_timer = 30;
 
         // Knockback
         var dx = x - zombie.x;
@@ -76,18 +79,3 @@ if (invincibility_timer <= 0) {
         }
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

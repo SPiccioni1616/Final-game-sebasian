@@ -3,14 +3,14 @@ if (global.show_powerup_choice) {
 
     if (keyboard_check_pressed(ord("1"))) {
         with (obj_main_guy) {
-            hp = min(hp + 25, max_hp);
+            health = min(health + 100, max_health + 50);
         }
         close_powerup();
     }
 
     if (keyboard_check_pressed(ord("2"))) {
         with (obj_main_guy) {
-            speed += 1.5;
+            move_speed += 1.5;;
         }
         close_powerup();
     }

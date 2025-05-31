@@ -11,6 +11,8 @@ move_y =0;       // vertival movment
  can_advance = false;
  
 cure = 0;
+speed = 0;
+
 //total_coins = instance_number(obj_coin);
 can_advance = false;
 
