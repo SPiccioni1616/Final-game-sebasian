@@ -36,24 +36,24 @@ if (health <= 0) {
  //  game_restart(); // Restart the game
    room_goto(rm_gameover)
 }
+//shooting
+if (mouse_check_button_pressed(mb_left)) {
+    if (global.multi_shot) {
+        var angle = point_direction(x, y, mouse_x, mouse_y);
 
-// Shooting
-if (global.multi_shot) {
-    var angle = point_direction(x, y, mouse_x, mouse_y);
-    var bullet1 = instance_create_layer(x, y, "Instances_1", obj_bullet);
-    bullet1.direction = angle - 10;
+        var b1 = instance_create_layer(x, y, "Instances_1", obj_bullet);
+        b1.direction = angle - 10;
 
-    var bullet2 = instance_create_layer(x, y, "Instances_1", obj_bullet);
-    bullet2.direction = angle;
+        var b2 = instance_create_layer(x, y, "Instances_1", obj_bullet);
+        b2.direction = angle;
 
-    var bullet3 = instance_create_layer(x, y, "Instances_1", obj_bullet);
-    bullet3.direction = angle + 10;
-} else {
-    var bullet = instance_create_layer(x, y, "Instances_1", obj_bullet);
-    bullet.direction = point_direction(x, y, mouse_x, mouse_y);
+        var b3 = instance_create_layer(x, y, "Instances_1", obj_bullet);
+        b3.direction = angle + 10;
+    } else {
+        var b = instance_create_layer(x, y, "Instances_1", obj_bullet);
+        b.direction = point_direction(x, y, mouse_x, mouse_y);
+    }
 }
-
-
 // Update invincibility timer
 if (invincibility_timer > 0) {
     invincibility_timer -= 1;

@@ -22,6 +22,7 @@ health = 100;  // Starting health (you can change this to any value)
 max_health = 150;  // Maximum health
 
 
+move_speed = 4; // default speed
 
 
 health = 100;
@@ -32,5 +33,11 @@ knockback_x = 0;
 knockback_y = 0;
 
 invincibility_timer = 0;
+
+global.points = 0;
+global.next_powerup_score = 25;
+global.show_powerup_choice = false;
+global.multi_shot = false;
+
 
 
