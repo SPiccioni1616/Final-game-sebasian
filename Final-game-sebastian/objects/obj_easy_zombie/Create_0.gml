@@ -3,7 +3,7 @@ hsp = 0;
 vsp = 0;
 
 // Movement speed
-spd = 3;
+spd = 5.5;
 
 // Bounce force when enemies collide
 bounce_force = 2;
