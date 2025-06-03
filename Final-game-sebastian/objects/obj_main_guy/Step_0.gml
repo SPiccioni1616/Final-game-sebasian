@@ -62,11 +62,17 @@ if (invincibility_timer > 0) {
     invincibility_timer -= 1;
 }
 
-// Zombie collision check
+// Zombie collision check with bounding box
 if (invincibility_timer <= 0) {
-    var zombie = instance_place(x, y, obj_easy_zombie);
+    var zombie = collision_rectangle(
+        bbox_left, bbox_top,
+        bbox_right, bbox_bottom,
+        obj_easy_zombie, false, true
+    );
+    
     if (zombie != noone) {
         health -= 10;
+        show_debug_message("Player health now: " + string(health));
         invincibility_timer = 30;
 
         // Knockback

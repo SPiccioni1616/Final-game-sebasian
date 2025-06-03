@@ -34,9 +34,10 @@ if (place_meeting(x, y, obj_ground)) {
     y += lengthdir_y(2, resolve_dir);
 }
 
-// === Damage player if close ===
+// === Damage player if touching (using bounding box) ===
 if (instance_exists(obj_main_guy)) {
-    if (point_distance(x, y, obj_main_guy.x, obj_main_guy.y) < 20 && damage_cooldown <= 0) {
+    if (collision_rectangle(bbox_left, bbox_top, bbox_right, bbox_bottom, obj_main_guy, false, false) && damage_cooldown <= 0) {
+        show_debug_message("HIT!"); // Debug
         if (variable_instance_exists(obj_main_guy, "health")) {
             obj_main_guy.health -= 10;
             damage_cooldown = damage_delay;
@@ -48,7 +49,6 @@ if (instance_exists(obj_main_guy)) {
         }
     }
 }
-
 
 // === Prevent zombie from overlapping the player ===
 if (instance_exists(obj_main_guy)) {
