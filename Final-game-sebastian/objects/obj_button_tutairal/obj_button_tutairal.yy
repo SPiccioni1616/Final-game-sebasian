@@ -1,10 +1,10 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "obj_button",
+  "name": "obj_button_tutairal",
   "spriteId": {
-    "name": "Sprite16",
-    "path": "sprites/Sprite16/Sprite16.yy",
+    "name": "Sprite1621",
+    "path": "sprites/Sprite1621/Sprite1621.yy",
   },
   "solid": false,
   "visible": true,

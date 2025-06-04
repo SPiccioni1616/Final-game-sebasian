@@ -17,7 +17,8 @@
   ],
   "layers": [
     {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"Instances","instances":[
-        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_43304831","properties":[],"isDnd":false,"objectId":{"name":"obj_button","path":"objects/obj_button/obj_button.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":-3.7199142,"scaleX":9.5,"scaleY":4.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":736.0,"y":288.0,},
+        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_43304831","properties":[],"isDnd":false,"objectId":{"name":"obj_button_start","path":"objects/obj_button_start/obj_button_start.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":-3.7199142,"scaleX":9.5,"scaleY":6.785714,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":975.2976,"y":384.04218,},
+        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_AEEE0F8","properties":[],"isDnd":false,"objectId":{"name":"obj_button_tutairal","path":"objects/obj_button_tutairal/obj_button_tutairal.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":-4.302781,"scaleX":10.0,"scaleY":7.654018,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":983.3717,"y":524.2819,},
       ],"visible":false,"depth":0,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritVisibility":true,"inheritSubLayers":true,"gridX":32,"gridY":32,"layers":[],"hierarchyFrozen":false,"effectEnabled":true,"effectType":null,"properties":[],},
     {"resourceType":"GMRAssetLayer","resourceVersion":"1.0","name":"Assets_1","assets":[
         {"resourceType":"GMRSpriteGraphic","resourceVersion":"1.0","name":"graphic_14B6CA2E","spriteId":{"name":"start_finalgame","path":"sprites/start_finalgame/start_finalgame.yy",},"headPosition":0.0,"rotation":0.0,"scaleX":0.71510416,"scaleY":0.71574074,"animationSpeed":1.0,"colour":4294967295,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":0.0,"y":0.0,},
@@ -29,6 +30,7 @@
   "inheritCode": false,
   "instanceCreationOrder": [
     {"name":"inst_43304831","path":"rooms/rm_menu/rm_menu.yy",},
+    {"name":"inst_AEEE0F8","path":"rooms/rm_menu/rm_menu.yy",},
   ],
   "inheritCreationOrder": false,
   "sequenceId": null,
