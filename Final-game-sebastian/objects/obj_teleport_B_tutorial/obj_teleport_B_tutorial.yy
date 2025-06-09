@@ -1,7 +1,7 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "obj_teleport_B_des",
+  "name": "obj_teleport_B_tutorial",
   "spriteId": {
     "name": "Spr_door",
     "path": "sprites/Spr_door/Spr_door.yy",
