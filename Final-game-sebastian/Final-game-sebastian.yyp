@@ -66,6 +66,7 @@
     {"id":{"name":"spr_teleporter","path":"sprites/spr_teleporter/spr_teleporter.yy",},"order":14,},
     {"id":{"name":"Sprite27","path":"sprites/Sprite27/Sprite27.yy",},"order":25,},
     {"id":{"name":"obj_door","path":"objects/obj_door/obj_door.yy",},"order":4,},
+    {"id":{"name":"grgrgrg","path":"sprites/grgrgrg/grgrgrg.yy",},"order":18,},
     {"id":{"name":"obj_menu_controller","path":"objects/obj_menu_controller/obj_menu_controller.yy",},"order":3,},
   ],
   "Options": [
