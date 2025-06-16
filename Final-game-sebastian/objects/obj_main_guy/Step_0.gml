@@ -36,6 +36,7 @@ if (y < -300 || y > room_height + 300) {
 if (health <= 0) {
     instance_destroy();
     room_goto(rm_gameover);
+	audio_play_sound(super_mario_bros_2, 1, false);
 }
 
 // Shooting

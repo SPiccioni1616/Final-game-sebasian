@@ -5,3 +5,5 @@ spawn_delay = 30; // time between each enemy spawn
 enemy_spawn_timer = 0;
 enemies_alive = 0;
 wave_in_progress = true;
+wave6_song_played = false;
+wave10_song_played = false;

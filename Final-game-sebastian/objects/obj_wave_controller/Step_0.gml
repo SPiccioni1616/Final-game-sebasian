@@ -23,3 +23,17 @@ if (wave_in_progress) {
         alarm[0] = 60; // wait 1 second before starting next wave
     }
 }
+
+
+if (wave_number == 6 && !wave6_song_played) {
+    audio_play_sound(_1738_song, 1, false);
+    wave6_song_played = true;
+}
+
+if (wave_number == 10 && !wave10_song_played) {
+    audio_play_sound(victory_mario_series_hq_super_smash_bros, 1, false);
+    wave10_song_played = true;
+
+    // Go to the "You Win" room
+    room_goto(room_you_win);
+}
